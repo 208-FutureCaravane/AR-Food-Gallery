@@ -1,15 +1,19 @@
 # 🍽️ AR Food Gallery
 
-An interactive **Augmented Reality (AR) food gallery** built with React, Vite, and WebXR technologies. View delicious food items in your real environment using your mobile device's camera!
+An interactive **Augmented Reality (AR) food gallery** built with React, Vite,
+and WebXR technologies. View delicious food items in your real environment using
+your mobile device's camera!
 
 ## ✨ Features
 
 - **🥘 Interactive Food Gallery**: Browse through a collection of 3D food models
-- **📱 AR Visualization**: View food items in augmented reality using your phone's camera
+- **📱 AR Visualization**: View food items in augmented reality using your
+  phone's camera
 - **🎯 WebXR Support**: Compatible with ARCore (Android) and ARKit (iOS)
 - **📐 3D Model Support**: Supports GLB and OBJ format 3D models
 - **🎨 Responsive Design**: Works seamlessly across desktop and mobile devices
-- **🖼️ Fallback Images**: Graceful fallback to static images when models fail to load
+- **🖼️ Fallback Images**: Graceful fallback to static images when models fail to
+  load
 - **🔄 Auto-rotate**: Models automatically rotate for better viewing experience
 
 ## 🚀 Quick Start
@@ -23,45 +27,48 @@ An interactive **Augmented Reality (AR) food gallery** built with React, Vite, a
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
    git clone <your-repo-url>
    cd ar-food-app
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install --legacy-peer-deps
    ```
 
 3. **Start development server**
+
    ```bash
    npm run dev
    ```
 
-4. **Open in browser**
-   Navigate to `http://localhost:5173`
+4. **Open in browser** Navigate to `http://localhost:5173`
 
 ### 🐳 Docker Deployment
 
 #### Build and run with Docker
 
 1. **Build the Docker image**
+
    ```bash
    docker build -t ar-food-app .
    ```
 
 2. **Run the container**
+
    ```bash
    docker run -d -p 8080:80 --name ar-food-app ar-food-app
    ```
 
-3. **Access the application**
-   Open `http://localhost:8080` in your browser
+3. **Access the application** Open `http://localhost:8080` in your browser
 
 #### Docker Compose (Optional)
 
 ```yaml
-version: '3.8'
+version: "3.8"
 services:
   ar-food-app:
     build: .
@@ -98,12 +105,12 @@ ar-food-app/
 ## 🎮 How to Use
 
 1. **Browse Gallery**: View the collection of food items on the main page
-2. **Enter AR Mode**: 
+2. **Enter AR Mode**:
    - Tap "📱 View in AR" button on any food item
    - Allow camera permissions when prompted
    - Point your camera at a flat surface
    - Tap to place the 3D food model in your space
-3. **Interact**: 
+3. **Interact**:
    - Move around to view the model from different angles
    - Pinch to zoom in/out
    - Tap and drag to rotate the model
@@ -138,7 +145,9 @@ ar-food-app/
 ### Model Format Conversion
 
 For best AR performance, convert OBJ files to GLB:
-1. Visit [Aspose 3D Converter](https://products.aspose.app/3d/conversion/obj-to-glb)
+
+1. Visit
+   [Aspose 3D Converter](https://products.aspose.app/3d/conversion/obj-to-glb)
 2. Upload your OBJ file
 3. Download the converted GLB file
 4. Place in the `public/models/` directory
@@ -146,29 +155,34 @@ For best AR performance, convert OBJ files to GLB:
 ## 📱 Device Compatibility
 
 ### AR Support
+
 - **Android**: ARCore-enabled devices (Android 7.0+)
 - **iOS**: ARKit-enabled devices (iOS 11.0+)
 - **Web Browsers**: Chrome, Safari, Edge (with WebXR support)
 
 ### Fallback Support
+
 - Desktop browsers display 3D models without AR functionality
 - Devices without AR support show static images
 
 ## 🚀 Deployment Options
 
 ### 1. Static Hosting (Vercel, Netlify)
+
 ```bash
 npm run build
 # Deploy the 'dist' folder
 ```
 
 ### 2. Docker Container
+
 ```bash
 docker build -t ar-food-app .
 docker run -p 8080:80 ar-food-app
 ```
 
 ### 3. Cloud Platforms
+
 - AWS S3 + CloudFront
 - Google Cloud Storage
 - Azure Static Web Apps
@@ -197,17 +211,20 @@ npm run preview
 ## 🐛 Troubleshooting
 
 ### AR not working?
+
 - Ensure you're on a mobile device with ARCore/ARKit support
 - Check camera permissions are granted
 - Try in well-lit environment with textured surfaces
 - Use HTTPS (required for camera access)
 
 ### Models not loading?
+
 - Verify GLB file format and path
 - Check browser console for error messages
 - Ensure model files are accessible in `/public/models/`
 
 ### Docker build fails?
+
 - Run with `--legacy-peer-deps` flag for dependency conflicts
 - Check Docker daemon is running
 - Verify sufficient disk space
@@ -228,12 +245,14 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - [Google Model Viewer](https://modelviewer.dev/) for WebXR AR capabilities
 - [Three.js](https://threejs.org/) for 3D graphics rendering
-- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) for React integration
+- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) for React
+  integration
 - [Vite](https://vitejs.dev/) for lightning-fast development
 
 ---
 
-**🚀 Ready to experience food in AR? Start the development server and point your mobile device at `localhost:5173`!**
+**🚀 Ready to experience food in AR? Start the development server and point your
+mobile device at `localhost:5173`!**
 
 1. Place your OBJ files in `public/models/`
 2. Update the model configuration in `src/utils/modelUtils.js`:

@@ -9,12 +9,6 @@ const ARGallery = () => {
       modelPath: "/models/burger/source/Buger.glb",
       imagePath: "/models/burger_merged.webp",
     },
-    {
-      id: 2,
-      name: "French Croissant",
-      modelPath: "/models/Croissant.obj",
-      imagePath: "/models/Croissant.webp",
-    },
   ];
 
   return (
